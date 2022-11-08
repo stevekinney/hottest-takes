@@ -7,7 +7,7 @@ const AddPost = () => {
   const { addPost } = useActions();
 
   return (
-    <div className="my-8 border-2 border-primary-600 p-4 shadow-sm">
+    <div className="p-4 mb-8 border-2 shadow-sm border-primary-600">
       <h4>Write Post</h4>
       <form
         className="flex flex-col gap-4"
