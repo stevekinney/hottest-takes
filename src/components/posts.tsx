@@ -1,5 +1,5 @@
+import { memo } from 'react';
 import AddPost from './add-post';
-import LoadPosts from './load-posts';
 import Post from './post';
 
 type PostsProps = { posts: Post[] };
@@ -7,8 +7,7 @@ type PostsProps = { posts: Post[] };
 const Posts = ({ posts }: PostsProps) => {
   return (
     <section>
-      <LoadPosts onSubmit={() => {}} />
-      <AddPost onSubmit={() => {}} />
+      <AddPost />
       <section>
         {posts.map((post) => (
           <Post key={post.id} post={post} />
@@ -18,4 +17,4 @@ const Posts = ({ posts }: PostsProps) => {
   );
 };
 
-export default Posts;
+export default memo(Posts);

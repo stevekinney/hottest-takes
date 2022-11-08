@@ -23,14 +23,6 @@ type User = {
   username: string;
 };
 
-type Address = {
-  street: string;
-  city: string;
-  zipCode: string;
-  county: string;
-  country: string;
-};
-
 type Action<T extends string, P = never> = {
   type: T;
 } & ([P] extends [never]
@@ -38,3 +30,35 @@ type Action<T extends string, P = never> = {
   : {
       payload: P;
     });
+
+type WithoutId<T> = Omit<T, 'id'>;
+
+type ApplicationState = {
+  users: User[];
+  posts: Post[];
+};
+
+type RemovePayload = {
+  id: string;
+};
+
+type AddPostAction = Action<'AddPost', WithoutId<Post>>;
+type RemovePostAction = Action<'RemovePost', RemovePayload>;
+type AddUserAction = Action<'AddUser', WithoutId<User>>;
+type RemoveUserAction = Action<'RemoveUser', RemovePayload>;
+type AddCommentAction = Action<
+  'AddComment',
+  WithoutId<PostComment> & { postId: string }
+>;
+type RemoveCommentAction = Action<
+  'RemoveComment',
+  RemovePayload & { postId: string }
+>;
+
+type ApplicationActions =
+  | AddPostAction
+  | RemovePostAction
+  | AddUserAction
+  | RemoveUserAction
+  | AddCommentAction
+  | RemoveCommentAction;

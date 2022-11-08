@@ -1,20 +1,18 @@
-import { FormEventHandler, useState } from 'react';
+import { memo, useState } from 'react';
+import { useDispatch } from '../lib/context';
 
-type AddUserProps = {
-  onSubmit: FormEventHandler;
-};
-
-const AddUser = ({ onSubmit }: AddUserProps) => {
+const AddUser = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [userName, setUserName] = useState('');
+  const { addUser } = useDispatch();
 
   return (
     <form
       className="flex flex-col gap-4"
       onSubmit={(e) => {
         e.preventDefault();
-        onSubmit(e);
+        addUser(firstName, lastName, userName);
       }}
     >
       <div>
@@ -61,4 +59,4 @@ const AddUser = ({ onSubmit }: AddUserProps) => {
   );
 };
 
-export default AddUser;
+export default memo(AddUser);

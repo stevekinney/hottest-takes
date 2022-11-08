@@ -1,16 +1,10 @@
-import { useEffect, useState } from 'react';
-import { fetchPosts, fetchUsers } from '../lib/fetch';
+import { useContext } from 'react';
+import { StateContext } from '../lib/context';
 import Posts from './posts';
 import Users from './users';
 
 const Application = () => {
-  const [posts, setPosts] = useState<Post[]>([]);
-  const [users, setUsers] = useState<User[]>([]);
-
-  useEffect(() => {
-    fetchPosts().then(setPosts);
-    fetchUsers().then(setUsers);
-  }, []);
+  const { posts, users } = useContext(StateContext);
 
   return (
     <main className="p-8 m-auto bg-white shadow-xl">

@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { PropsWithChildren } from 'react';
+import { memo, PropsWithChildren } from 'react';
 
 type UserProps = {
   user: User;
@@ -20,4 +20,4 @@ const User = ({ user, className, children }: PropsWithChildren<UserProps>) => {
   );
 };
 
-export default User;
+export default memo(User);

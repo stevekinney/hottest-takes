@@ -1,13 +1,16 @@
-import { FormEventHandler, useId, useState } from 'react';
-import users from '../lib/users.json';
+import { memo, useContext, useId, useState } from 'react';
+import { StateContext, useDispatch } from '../lib/context';
 
 type AddCommentProps = {
-  onSubmit: FormEventHandler;
+  postId: string;
 };
 
-const AddComment = ({ onSubmit }: AddCommentProps) => {
+const AddComment = ({ postId }: AddCommentProps) => {
   const id = useId();
+  const { users } = useContext(StateContext);
+  const { addComment } = useDispatch();
   const [comment, setComment] = useState('');
+  const [selectedUser, setSelectedUser] = useState(users[0]);
 
   return (
     <div className="p-4 my-8 border-2 shadow-sm border-primary-600">
@@ -16,14 +19,22 @@ const AddComment = ({ onSubmit }: AddCommentProps) => {
         className="flex flex-col gap-4"
         onSubmit={(e) => {
           e.preventDefault();
-          onSubmit(e);
+          addComment(postId, selectedUser, comment);
         }}
       >
         <div className="flex items-center gap-2">
           <label htmlFor={`${id}-user`}>User</label>
-          <select id={`${id}-user`}>
+          <select
+            id={`${id}-user`}
+            value={selectedUser.id}
+            onChange={(e) => {
+              console.log(e.target.value);
+              const user = users.find((u) => u.id === e.target.value);
+              setSelectedUser(user || users[0]);
+            }}
+          >
             {users.map((user) => (
-              <option>
+              <option key={user.id} value={user.id}>
                 {user.firstName} {user.lastName}
               </option>
             ))}
@@ -50,4 +61,4 @@ const AddComment = ({ onSubmit }: AddCommentProps) => {
   );
 };
 
-export default AddComment;
+export default memo(AddComment);

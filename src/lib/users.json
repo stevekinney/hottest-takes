@@ -1,162 +1,62 @@
 [
   {
     "id": "54c92538-76e7-4fa9-84b1-538f80d00ba9",
-    "email": "jose-manuelmurakami@optusnet.biz",
     "firstName": "Jose-Manuel",
     "lastName": "Murakami",
-    "phone": "+350 230 95231",
-    "img": "https://i.pravatar.cc/100",
-    "username": "Jose-Manuel_Murakami",
-    "address": {
-      "street": "883 Elian Road",
-      "city": "Cuyahoga Falls",
-      "zipCode": "46989",
-      "county": "North Yorkshire",
-      "country": "Ecuador"
-    }
+    "username": "Jose-Manuel_Murakami"
   },
   {
     "id": "26074cd0-e028-49f9-83fe-fa41285680db",
-    "email": "patrick+van-den-berg796@freenet.info",
     "firstName": "Patrick",
     "lastName": "Van-den-Berg",
-    "phone": "+596(473)18 25 62",
-    "img": "https://i.pravatar.cc/100",
-    "username": "Patrick.Van-den-Berg37",
-    "address": {
-      "street": "5 Wolf Glen",
-      "city": "Glen Burnie",
-      "zipCode": "36598-8408",
-      "county": "Durham",
-      "country": "Chile"
-    }
+    "username": "Patrick.Van-den-Berg37"
   },
   {
     "id": "6c676068-0369-486a-bb7c-aa21b488f9ff",
-    "email": "javier-mandal@shaw.name",
     "firstName": "Javier",
     "lastName": "Mandal",
-    "phone": "+386 27 259 643",
-    "img": "https://i.pravatar.cc/100",
-    "username": "Javier.Mandal",
-    "address": {
-      "street": "376 Jade Shore",
-      "city": "West Amiya",
-      "zipCode": "94134-8058",
-      "county": "Durham",
-      "country": "Azerbaijan"
-    }
+    "username": "Javier.Mandal"
   },
   {
     "id": "61ce0923-0993-4d7e-b766-740bc77b2894",
-    "email": "pablo-chukwu900@frontiernet.dev",
     "firstName": "Pablo",
     "lastName": "Chukwu",
-    "phone": "+377(157)486 607",
-    "img": "https://i.pravatar.cc/100",
-    "username": "Pablo.Chukwu96",
-    "address": {
-      "street": "246 Dianna Inlet",
-      "city": "Reichertland",
-      "zipCode": "35123",
-      "county": "Kent",
-      "country": "Switzerland"
-    }
+    "username": "Pablo.Chukwu96"
   },
   {
     "id": "30d9bb54-8e48-462f-82f1-0ee3e16f6bcc",
-    "email": "ko-koech@earthlink.info",
     "firstName": "Ko",
     "lastName": "Koech",
-    "phone": "+590(370)891 165",
-    "img": "https://i.pravatar.cc/100",
-    "username": "Ko_Koech",
-    "address": {
-      "street": "362 Collins Lane",
-      "city": "Venamouth",
-      "zipCode": "94445",
-      "county": "Buckinghamshire",
-      "country": "Belarus"
-    }
+    "username": "Ko_Koech"
   },
   {
     "id": "9312fadb-f828-4f81-bbd9-0a386b38573c",
-    "email": "minhongthong967@alice.com",
     "firstName": "Min",
     "lastName": "Hongthong",
-    "phone": "+687 59 5253",
-    "img": "https://i.pravatar.cc/100",
-    "username": "Min_Hongthong",
-    "address": {
-      "street": "1420 Esteban Inlet",
-      "city": "Lake Zackton",
-      "zipCode": "80895",
-      "county": "Kent",
-      "country": "Cyprus"
-    }
+    "username": "Min_Hongthong"
   },
   {
     "id": "13d5666a-43ea-4d71-af3d-223553186154",
-    "email": "muhammedsmit983@centurytel.name",
     "firstName": "Muhammed",
     "lastName": "Smit",
-    "phone": "+249 12 983 0283",
-    "img": "https://i.pravatar.cc/100",
-    "username": "Muhammed_Smit",
-    "address": {
-      "street": "719 Esteban Inlet",
-      "city": "New Philip",
-      "zipCode": "33784-2506",
-      "county": "Greater London",
-      "country": "Somalia"
-    }
+    "username": "Muhammed_Smit"
   },
   {
     "id": "be333602-e6a7-40e1-abec-293754197acd",
-    "email": "masako_watkins567@freenet.name",
     "firstName": "Masako",
     "lastName": "Watkins",
-    "phone": "+377 66 682 758",
-    "img": "https://i.pravatar.cc/100",
-    "username": "Masako_Watkins",
-    "address": {
-      "street": "1203 Arturo Manors",
-      "city": "North Celia",
-      "zipCode": "42487",
-      "county": "Oxfordshire",
-      "country": "French Southern Territories"
-    }
+    "username": "Masako_Watkins"
   },
   {
     "id": "490696c3-a41b-424a-bcdc-37b9fa60c5dd",
-    "email": "amphonbiswas910@tiscali.biz",
     "firstName": "Amphon",
     "lastName": "Biswas",
-    "phone": "+34(317)146 540",
-    "img": "https://i.pravatar.cc/100",
-    "username": "Amphon.Biswas",
-    "address": {
-      "street": "134 Quigley Parkways",
-      "city": "New Kyle",
-      "zipCode": "17708-2139",
-      "county": "Lancashire",
-      "country": "Switzerland"
-    }
+    "username": "Amphon.Biswas"
   },
   {
     "id": "d44440fa-6b8a-4f5f-ae7e-b48575db5e88",
-    "email": "daniel+ibrahim696@windstream.org",
     "firstName": "Daniel",
     "lastName": "Ibrahim",
-    "phone": "+376 358 455",
-    "img": "https://i.pravatar.cc/100",
-    "username": "Daniel_Ibrahim41",
-    "address": {
-      "street": "556 Max Wall",
-      "city": "Willbury",
-      "zipCode": "47103",
-      "county": "Nottinghamshire",
-      "country": "Czech Republic"
-    }
+    "username": "Daniel_Ibrahim41"
   }
 ]

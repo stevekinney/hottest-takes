@@ -1,12 +1,10 @@
-import { FormEventHandler, useState } from 'react';
+import { memo, useState } from 'react';
+import { useDispatch } from '../lib/context';
 
-type AddPostProps = {
-  onSubmit: FormEventHandler;
-};
-
-const AddPost = ({ onSubmit }: AddPostProps) => {
+const AddPost = () => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
+  const { addPost } = useDispatch();
 
   return (
     <div className="p-4 my-8 border-2 shadow-sm border-primary-600">
@@ -15,7 +13,7 @@ const AddPost = ({ onSubmit }: AddPostProps) => {
         className="flex flex-col gap-4"
         onSubmit={(e) => {
           e.preventDefault();
-          onSubmit(e);
+          addPost(title, body);
         }}
       >
         <div className="flex flex-col sm:flex-row">
@@ -52,4 +50,4 @@ const AddPost = ({ onSubmit }: AddPostProps) => {
   );
 };
 
-export default AddPost;
+export default memo(AddPost);
