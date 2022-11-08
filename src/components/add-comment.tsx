@@ -1,5 +1,5 @@
 import { memo, useContext, useId, useState } from 'react';
-import { StateContext, useDispatch } from '../lib/context';
+import { StateContext, useActions } from '../lib/context';
 
 type AddCommentProps = {
   postId: string;
@@ -8,12 +8,12 @@ type AddCommentProps = {
 const AddComment = ({ postId }: AddCommentProps) => {
   const id = useId();
   const { users } = useContext(StateContext);
-  const { addComment } = useDispatch();
+  const { addComment } = useActions();
   const [comment, setComment] = useState('');
   const [selectedUser, setSelectedUser] = useState(users[0]);
 
   return (
-    <div className="p-4 my-8 border-2 shadow-sm border-primary-600">
+    <div className="my-8 border-2 border-primary-600 p-4 shadow-sm">
       <h4>Add Comment</h4>
       <form
         className="flex flex-col gap-4"

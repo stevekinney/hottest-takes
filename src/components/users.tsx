@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { useDispatch } from '../lib/context';
+import { useActions } from '../lib/context';
 import AddUser from './add-user';
 import User from './user';
 
@@ -8,7 +8,7 @@ type UsersProps = {
 };
 
 const Users = ({ users }: UsersProps) => {
-  const { removeUser } = useDispatch();
+  const { removeUser } = useActions();
 
   return (
     <section className="flex flex-col gap-4">
@@ -17,7 +17,7 @@ const Users = ({ users }: UsersProps) => {
         <User
           key={user.id}
           user={user}
-          className="p-2 text-sm border-2 shadow-sm border-primary-600"
+          className="border-2 border-primary-600 p-2 text-sm shadow-sm"
         >
           <button
             className="px-1 py-0 font-normal"

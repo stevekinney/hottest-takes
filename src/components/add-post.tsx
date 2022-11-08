@@ -1,13 +1,13 @@
 import { memo, useState } from 'react';
-import { useDispatch } from '../lib/context';
+import { useActions } from '../lib/context';
 
 const AddPost = () => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
-  const { addPost } = useDispatch();
+  const { addPost } = useActions();
 
   return (
-    <div className="p-4 my-8 border-2 shadow-sm border-primary-600">
+    <div className="my-8 border-2 border-primary-600 p-4 shadow-sm">
       <h4>Write Post</h4>
       <form
         className="flex flex-col gap-4"

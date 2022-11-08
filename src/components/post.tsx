@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { useDispatch } from '../lib/context';
+import { useActions } from '../lib/context';
 import AddComment from './add-comment';
 import PostComment from './comment';
 
@@ -8,10 +8,10 @@ type PostProps = {
 };
 
 const Post = ({ post }: PostProps) => {
-  const { removePost } = useDispatch();
+  const { removePost } = useActions();
   return (
-    <article className="flex flex-col gap-4 p-4 mb-20 border-2 border-opacity-50 shadow-sm border-primary-800">
-      <header className="flex flex-col items-center place-content-between xl:flex-row">
+    <article className="mb-20 flex flex-col gap-4 border-2 border-primary-800 border-opacity-50 p-4 shadow-sm">
+      <header className="flex flex-col place-content-between items-center xl:flex-row">
         <h2>{post.title}</h2>
         <button
           className="w-full whitespace-nowrap xl:w-fit"
