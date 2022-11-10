@@ -1,10 +1,9 @@
 import { memo, useState } from 'react';
-import { useActions } from '../lib/context';
 
 const AddPost = () => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
-  const { addPost } = useActions();
+  const addPost = (...args: any[]) => {};
 
   return (
     <div className="p-4 mb-8 border-2 shadow-sm border-primary-600">

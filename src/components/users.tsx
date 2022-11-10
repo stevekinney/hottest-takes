@@ -1,5 +1,4 @@
 import { memo } from 'react';
-import { useActions } from '../lib/context';
 import AddUser from './add-user';
 import User from './user';
 
@@ -8,16 +7,16 @@ type UsersProps = {
 };
 
 const Users = ({ users }: UsersProps) => {
-  const { removeUser } = useActions();
+  const removeUser = (...args: any[]) => {};
 
   return (
-    <section className="flex flex-col gap-4">
+    <section className="flex flex-col w-1/4 gap-4">
       <AddUser />
       {users.map((user) => (
         <User
           key={user.id}
           user={user}
-          className="border-2 border-primary-600 p-2 text-sm shadow-sm"
+          className="p-2 text-sm border-2 shadow-sm border-primary-600"
         >
           <button
             className="px-1 py-0 font-normal"

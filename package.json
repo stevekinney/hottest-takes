@@ -40,6 +40,7 @@
     ]
   },
   "devDependencies": {
+    "@ngneat/falso": "^6.1.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
@@ -49,6 +50,7 @@
     "@types/react-dom": "^18.0.8",
     "@types/uuid": "^8.3.4",
     "autoprefixer": "^10.4.13",
+    "miragejs": "^0.1.46",
     "postcss": "^8.4.18",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.13",

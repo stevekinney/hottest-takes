@@ -6,12 +6,14 @@ type LoadPostsProps = {
 
 const LoadPosts = ({ onSubmit }: LoadPostsProps) => {
   const [numberOfArticles, setNumberOfArticles] = useState(5);
+  const loadPosts = (...args: any[]) => {};
 
   return (
     <form
       className="mb-8"
       onSubmit={(e) => {
         e.preventDefault();
+        loadPosts(numberOfArticles);
         onSubmit(e);
       }}
     >

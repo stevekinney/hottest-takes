@@ -1,5 +1,4 @@
-import { memo, useContext, useId, useState } from 'react';
-import { StateContext, useActions } from '../lib/context';
+import { memo, useId, useState } from 'react';
 
 type AddCommentProps = {
   postId: string;
@@ -7,13 +6,13 @@ type AddCommentProps = {
 
 const AddComment = ({ postId }: AddCommentProps) => {
   const id = useId();
-  const { users } = useContext(StateContext);
-  const { addComment } = useActions();
+  const users: User[] = [];
+  const addComment = (...args: any[]) => {};
   const [comment, setComment] = useState('');
   const [selectedUser, setSelectedUser] = useState(users[0]);
 
   return (
-    <div className="my-8 border-2 border-primary-600 p-4 shadow-sm">
+    <div className="p-4 my-8 border-2 shadow-sm border-primary-600">
       <h4>Add Comment</h4>
       <form
         className="flex flex-col gap-4"

@@ -1,11 +1,10 @@
 import { memo, useState } from 'react';
-import { useActions } from '../lib/context';
 
 const AddUser = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [userName, setUserName] = useState('');
-  const { addUser } = useActions();
+  const addUser = (...args: any[]) => {};
 
   return (
     <form

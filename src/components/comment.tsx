@@ -1,5 +1,4 @@
 import { memo } from 'react';
-import { useActions } from '../lib/context';
 import User from './user';
 
 type CommentProps = {
@@ -8,10 +7,10 @@ type CommentProps = {
 };
 
 const PostComment = ({ comment, postId }: CommentProps) => {
-  const { removeComment } = useActions();
+  const removeComment = (...args: any[]) => {};
 
   return (
-    <article className="flex flex-col gap-2 rounded-sm border-2 border-l-8 border-primary-700 p-2 pl-4 shadow-md">
+    <article className="flex flex-col gap-2 p-2 pl-4 border-2 border-l-8 rounded-sm shadow-md border-primary-700">
       <User user={comment.user} />
       <p>{comment.text}</p>
       <div className="flex place-content-end">
