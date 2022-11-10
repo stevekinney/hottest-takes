@@ -1,3 +1,3 @@
-# React and TypeScript Example
+# The HOTTEST of Takes
 
-This is an exmaple application from Steve's React and TypeScript course.
+This is an example application from Steve's React and TypeScript course.
