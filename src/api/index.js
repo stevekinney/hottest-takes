@@ -83,7 +83,6 @@ export function makeServer({ environment = 'test' }) {
           });
         });
       });
-      console.log(server.db.dump());
     },
   });
 }

@@ -5,7 +5,7 @@ import Application from './components/application';
 import { makeServer } from './api';
 
 import './index.css';
-import { Provider } from './lib/context';
+import { Provider } from './context';
 
 const environment = process.env.NODE_ENV;
 makeServer({ environment });

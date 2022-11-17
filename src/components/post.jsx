@@ -1,15 +1,10 @@
 import { memo } from 'react';
 import AddComment from './add-comment';
 import PostComment from './comment';
+import { useActions } from '../hooks';
 
-type PostProps = {
-  post: Post;
-};
-
-const Post = ({ post }: PostProps) => {
-  const removePost = (...args: any[]) => {};
-
-  console.log({ post });
+const Post = ({ post }) => {
+  const { removePost } = useActions();
 
   return (
     <article className="flex flex-col w-full gap-4 p-4 mb-20 border-2 border-opacity-50 shadow-sm border-primary-800">

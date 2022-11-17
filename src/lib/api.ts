@@ -4,6 +4,6 @@ export const fetchUsers = async (): Promise<User[]> => {
 };
 
 export const fetchPosts = async (): Promise<User[]> => {
-  const res = await fetch('/api/posts/1');
+  const res = await fetch('/api/posts');
   return await res.json();
 };

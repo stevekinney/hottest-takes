@@ -2,13 +2,7 @@ import AddPost from './add-post';
 import Posts from './posts';
 import Users from './users';
 
-import posts from '../api/posts.json';
-import users from '../api/users.json';
-
 const Application = () => {
-  // const posts: Post[] = [];
-  // const users: User[] = [];
-
   return (
     <main className="w-full p-8 m-auto">
       <header className="p-4 mb-12 text-center ">
@@ -19,9 +13,9 @@ const Application = () => {
       <div className="flex flex-col w-full gap-8 sm:flex-row">
         <section className="w-full">
           <AddPost />
-          <Posts posts={posts} />
+          <Posts />
         </section>
-        <Users users={users} />
+        <Users />
       </div>
     </main>
   );

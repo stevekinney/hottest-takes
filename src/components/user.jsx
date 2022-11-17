@@ -1,12 +1,7 @@
 import clsx from 'clsx';
-import { memo, PropsWithChildren } from 'react';
+import { memo } from 'react';
 
-type UserProps = {
-  user: User;
-  className?: string;
-};
-
-const User = ({ user, className, children }: PropsWithChildren<UserProps>) => {
+const User = ({ user, className, children }) => {
   return (
     <article
       className={clsx(

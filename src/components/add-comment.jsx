@@ -1,16 +1,12 @@
 import { memo, useId, useState } from 'react';
 import users from '../api/users.json';
+import { useActions } from '../hooks';
 
-type AddCommentProps = {
-  postId: string;
-};
-
-const AddComment = ({ postId }: AddCommentProps) => {
+const AddComment = ({ postId }) => {
   const id = useId();
-  // const users: User[] = [];
-  const addComment = (...args: any[]) => {};
   const [comment, setComment] = useState('');
   const [selectedUser, setSelectedUser] = useState(users[0]);
+  const { addComment } = useActions();
 
   return (
     <div className="p-4 my-8 border-2 shadow-sm border-primary-600">

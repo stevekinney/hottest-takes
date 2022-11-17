@@ -1,17 +1,18 @@
 import { memo, useState } from 'react';
+import { useActions } from '../hooks';
 
 const AddUser = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
-  const [userName, setUserName] = useState('');
-  const addUser = (...args: any[]) => {};
+  const [username, serUsername] = useState('');
+  const { addUser } = useActions();
 
   return (
     <form
       className="flex flex-col gap-4"
       onSubmit={(e) => {
         e.preventDefault();
-        addUser(firstName, lastName, userName);
+        addUser({ firstName, lastName, username });
       }}
     >
       <div>
@@ -48,9 +49,9 @@ const AddUser = () => {
           id="add-user-username"
           className="w-full"
           required
-          value={userName}
+          value={username}
           placeholder="User Name"
-          onChange={(e) => setUserName(e.target.value)}
+          onChange={(e) => serUsername(e.target.value)}
         />
       </div>
       <button type="submit">Add User</button>

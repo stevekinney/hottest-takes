@@ -1,9 +1,10 @@
 import { memo, useState } from 'react';
+import { useActions } from '../hooks';
 
 const AddPost = () => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
-  const addPost = (...args: any[]) => {};
+  const { addPost } = useActions();
 
   return (
     <div className="p-4 mb-8 border-2 shadow-sm border-primary-600">
@@ -12,7 +13,7 @@ const AddPost = () => {
         className="flex flex-col gap-4"
         onSubmit={(e) => {
           e.preventDefault();
-          addPost(title, body);
+          addPost({ title, body });
         }}
       >
         <div className="flex flex-col sm:flex-row">
