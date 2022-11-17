@@ -50,4 +50,4 @@ const AddPost = () => {
   );
 };
 
-export default memo(AddPost);
+export default AddPost;

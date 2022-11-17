@@ -20,4 +20,4 @@ const User = ({ user, className, children }) => {
   );
 };
 
-export default memo(User);
+export default User;

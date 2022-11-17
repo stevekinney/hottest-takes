@@ -59,4 +59,4 @@ const AddUser = () => {
   );
 };
 
-export default memo(AddUser);
+export default AddUser;

@@ -28,4 +28,4 @@ const Users = () => {
   );
 };
 
-export default memo(Users);
+export default Users;

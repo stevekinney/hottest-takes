@@ -18,4 +18,4 @@ const PostComment = ({ comment, postId }) => {
   );
 };
 
-export default memo(PostComment);
+export default PostComment;

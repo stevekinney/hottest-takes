@@ -23,4 +23,4 @@ const Posts = () => {
   );
 };
 
-export default memo(Posts);
+export default Posts;

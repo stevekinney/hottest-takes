@@ -57,4 +57,4 @@ const AddComment = ({ postId }) => {
   );
 };
 
-export default memo(AddComment);
+export default AddComment;
