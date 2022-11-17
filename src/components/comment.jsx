@@ -1,5 +1,6 @@
 import User from './user';
 import { useActions } from '../hooks';
+import { memo } from 'react';
 
 const PostComment = ({ comment, postId }) => {
   const { removeComment } = useActions();
@@ -17,4 +18,4 @@ const PostComment = ({ comment, postId }) => {
   );
 };
 
-export default PostComment;
+export default memo(PostComment);
