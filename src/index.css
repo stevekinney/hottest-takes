@@ -10,7 +10,7 @@ body {
 
 html,
 body {
-  @apply m-0 h-screen w-screen bg-slate-800 p-0 font-serif text-lg;
+  @apply m-0 h-screen w-screen p-0 font-serif;
 }
 
 #root {

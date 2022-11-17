@@ -1,26 +1,19 @@
-import {
-  createServer,
-  Model,
-  belongsTo,
-  hasMany,
-  Factory,
-  RestSerializer,
-} from 'miragejs';
+import { createServer, Model, belongsTo, hasMany, Factory } from 'miragejs';
 import {
   randFirstName,
   randLastName,
   randText,
   randUserName,
 } from '@ngneat/falso';
+import Serializer from './serializer';
 
 const getRandomElement = (collection) => {
   return collection[Math.floor(Math.random() * collection.length)];
 };
 
-const ApplicationSerializer = RestSerializer.extend({
-  serializeIds: 'always',
+const ApplicationSerializer = Serializer.extend({
   embed: true,
-  root: false,
+  root: true,
 });
 
 export function makeServer({ environment = 'test' }) {
@@ -89,8 +82,8 @@ export function makeServer({ environment = 'test' }) {
             user: getRandomElement(users),
           });
         });
-        console.log(server.db.dump());
       });
+      console.log(server.db.dump());
     },
   });
 }

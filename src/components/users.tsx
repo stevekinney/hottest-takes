@@ -10,7 +10,7 @@ const Users = ({ users }: UsersProps) => {
   const removeUser = (...args: any[]) => {};
 
   return (
-    <section className="flex flex-col w-1/4 gap-4">
+    <section className="flex flex-col w-full gap-4 sm:w-1/2 md:w-1/3 lg:w-1/4">
       <AddUser />
       {users.map((user) => (
         <User

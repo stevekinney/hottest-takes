@@ -1,4 +1,5 @@
 import { memo, useId, useState } from 'react';
+import users from '../api/users.json';
 
 type AddCommentProps = {
   postId: string;
@@ -6,7 +7,7 @@ type AddCommentProps = {
 
 const AddComment = ({ postId }: AddCommentProps) => {
   const id = useId();
-  const users: User[] = [];
+  // const users: User[] = [];
   const addComment = (...args: any[]) => {};
   const [comment, setComment] = useState('');
   const [selectedUser, setSelectedUser] = useState(users[0]);

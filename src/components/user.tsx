@@ -8,8 +8,13 @@ type UserProps = {
 
 const User = ({ user, className, children }: PropsWithChildren<UserProps>) => {
   return (
-    <article className={clsx('flex place-content-between gap-8', className)}>
-      <div className="flex gap-2 font-sans font-bold">
+    <article
+      className={clsx(
+        'flex place-content-between items-start gap-8',
+        className,
+      )}
+    >
+      <div className="flex flex-col gap-1 font-sans font-bold">
         <div className="whitespace-nowrap">
           {user.firstName} {user.lastName}
         </div>

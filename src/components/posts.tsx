@@ -6,7 +6,7 @@ type PostsProps = { posts: Post[] };
 const Posts = ({ posts }: PostsProps) => {
   if (!posts.length)
     return (
-      <section className="w-full italic text-center text-primary-900">
+      <section className="w-full text-center italic text-primary-900">
         No one has posted a hot take yet.
       </section>
     );
