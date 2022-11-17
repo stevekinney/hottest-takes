@@ -1,4 +1,3 @@
-import { memo } from 'react';
 import AddComment from './add-comment';
 import PostComment from './comment';
 import { useActions } from '../hooks';

@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import { memo } from 'react';
 
 const User = ({ user, className, children }) => {
   return (

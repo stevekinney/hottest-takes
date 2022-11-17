@@ -1,4 +1,3 @@
-import { memo } from 'react';
 import User from './user';
 import { useActions } from '../hooks';
 

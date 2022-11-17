@@ -1,4 +1,3 @@
-import { memo } from 'react';
 import { usePosts } from '../hooks';
 import Post from './post';
 

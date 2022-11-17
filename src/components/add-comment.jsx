@@ -1,4 +1,4 @@
-import { memo, useId, useState } from 'react';
+import { useId, useState } from 'react';
 import users from '../api/users.json';
 import { useActions } from '../hooks';
 
